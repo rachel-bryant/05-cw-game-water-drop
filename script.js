@@ -3,7 +3,7 @@ let gameRunning = false; // Keeps track of whether game is active or not
 let dropMaker; // Will store our timer that creates drops regularly
 let timeInt;
 let points = 0;
-let time = 5;
+let time = 30;
 let drops = [];
 
 const score = document.getElementById("score");
