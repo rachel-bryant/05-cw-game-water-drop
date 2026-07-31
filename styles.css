@@ -33,11 +33,36 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#end-screen {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  background: #c4ecff;
+  border: 3px solid #6ca4be;
+  padding: 40px 50px;
+  display: none;
+}
+
+#end-screen h1 {
+  margin-bottom: 10px;
+}
+
+#end-screen p {
+  margin-bottom: 15px;
+}
+
 .game-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+.title-row {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .score-panel {
@@ -60,6 +85,7 @@ body {
 #game-container {
     width: 800px;
     height: 600px;
+    margin-bottom: 20px;
     background-color: #e6f7ff;
     border: 2px solid #333;
     border-radius: 8px;
@@ -67,8 +93,13 @@ body {
     overflow: hidden;
 }
 
+img {
+  display: inline;
+  width:75px;
+}
 
-#start-btn {
+
+#start-btn, #end-screen button {
     padding: 8px 16px;
     background-color: #4CAF50;
     color: white;
@@ -88,11 +119,10 @@ body {
     font-weight: bold;
 }
 
-.water-drop {
+.water-drop, .bad-drop {
     position: absolute;
     width: 60px;  /* increased from 40px */
     height: 60px; /* increased from 40px */
-    background-color: #0099ff;
     border-radius: 50%;
     animation: dropFall linear forwards;
     transform-origin: center;
@@ -102,12 +132,16 @@ body {
     transition: transform 0.1s ease;  /* Smooth hover effect */
 }
 
-.water-drop:hover {
-    transform: scale(1.1);  /* Slight grow effect on hover */
+.water-drop {
+  background-color: #0099ff;
 }
 
 .bad-drop {
-    background-color: #ff4444;
+  background-color: #83674e;
+}
+
+.water-drop:hover {
+    transform: scale(1.1);  /* Slight grow effect on hover */
 }
 
 .game-title {
@@ -116,6 +150,7 @@ body {
     margin-top: 0;
     margin-bottom: 5px;  /* reduced from 20px */
     text-align: center;
+    display:inline;
 }
 
 .game-tagline {

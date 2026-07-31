@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="game-wrapper">
-        <h1 class="game-title">Water Drop</h1>
+        <div class="title-row">
+            <img src="https://seeklogo.com/images/C/charity-water-logo-9121D887A9-seeklogo.com.png">
+            <h1 class="game-title">Water Drop</h1>
+        </div>
         <p class="game-tagline">Catch the good drops, avoid the bad ones!</p>
         <div class="score-panel">
             <div class="score">Score: <span id="score">0</span></div>
@@ -18,6 +21,12 @@
         
         <div id="game-container">
         </div>
+    </div>
+    
+    <div id="end-screen">
+      <h1>Nice job!</h1>
+      <p>You got <span id="points"></span> points!</p>
+      <button onclick="startGame()">Start New Game</button>
     </div>
     
     <script src="script.js"></script>
